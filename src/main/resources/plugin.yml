@@ -1,0 +1,5 @@
+name: GrimaEconomy
+version: '${project.version}'
+main: gg.grima.economy.Economy
+authors: [ Ministry ]
+description: Simple economy plugin!
