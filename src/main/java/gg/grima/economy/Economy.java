@@ -1,5 +1,6 @@
 package gg.grima.economy;
 
+import gg.grima.economy.commands.BalanceCommand;
 import gg.grima.economy.commands.EconomyCommand;
 import gg.grima.economy.database.PlayerDatabase;
 import gg.grima.economy.listeners.JoinListener;
@@ -38,6 +39,7 @@ public final class Economy extends JavaPlugin {
 
     private void loadCommands() {
         new EconomyCommand(this);
+        new BalanceCommand(this);
     }
 
     private void loadListeners() {
