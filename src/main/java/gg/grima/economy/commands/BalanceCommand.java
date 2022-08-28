@@ -37,12 +37,12 @@ public class BalanceCommand implements CommandExecutor {
         if (args.length != 1) {
             final GrimaPlayer profile = this.registry.get(player.getUniqueId());
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', file.getString("Messages.Current-Balance")).replace("%balance%", NumberFormat.getInstance().format(profile.getBalance())));
-            return false;
+            return true;
         }
 
         if (Bukkit.getPlayer(args[0]) == null) {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', file.getString("Messages.Invalid-Player")));
-            return false;
+            return true;
         }
 
         final Player target = Bukkit.getPlayer(args[0]);
@@ -51,6 +51,6 @@ public class BalanceCommand implements CommandExecutor {
 
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', file.getString("Messages.Current-Balance-Others")).replace("%player%", target.getName()).replace("%balance%", NumberFormat.getInstance().format(profile.getBalance())));
 
-        return false;
+        return true;
     }
 }

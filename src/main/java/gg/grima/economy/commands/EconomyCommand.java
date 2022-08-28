@@ -43,7 +43,7 @@ public class EconomyCommand implements CommandExecutor {
 
         if (!player.hasPermission("grimaeconomy.admin")) {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', file.getString("Messages.No-Permissions")));
-            return false;
+            return true;
         }
 
         final String arg = args[0];
@@ -59,8 +59,8 @@ public class EconomyCommand implements CommandExecutor {
                     args
             );
 
-            return false;
+            return true;
         }
-        return false;
+        return true;
     }
 }
