@@ -4,3 +4,9 @@ Database:
   Database: "database"
   Username: "root"
   Password: ""
+
+Messages:
+  No-Permissions: "&4&l[!] &cNo permission!"
+  Invalid-Arguments: "&4&l[!] &cInvalid Arguments!"
+  Invalid-Player: "&4&l[!] &cInvalid Player!"
+  Invalid-Number: "&4&l[!] &cInvalid Number!"

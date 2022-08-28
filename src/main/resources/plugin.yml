@@ -3,3 +3,6 @@ version: '${project.version}'
 main: gg.grima.economy.Economy
 authors: [ Ministry ]
 description: Simple economy plugin!
+commands:
+  economy:
+    description: "Woah cool!"

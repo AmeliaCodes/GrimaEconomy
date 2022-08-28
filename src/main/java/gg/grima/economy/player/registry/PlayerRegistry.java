@@ -39,4 +39,8 @@ public final class PlayerRegistry {
     public boolean contains(final UUID uuid) {
         return this.players.containsKey(uuid);
     }
+
+    public GrimaPlayer get(final UUID uuid) {
+        return this.players.get(uuid);
+    }
 }

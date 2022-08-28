@@ -1,5 +1,6 @@
 package gg.grima.economy;
 
+import gg.grima.economy.commands.EconomyCommand;
 import gg.grima.economy.database.PlayerDatabase;
 import gg.grima.economy.listeners.JoinListener;
 import gg.grima.economy.player.registry.PlayerRegistry;
@@ -19,6 +20,7 @@ public final class Economy extends JavaPlugin {
 
         this.loadDatabase();
         this.loadRegistry();
+        this.loadCommands();
         this.loadListeners();
     }
 
@@ -32,6 +34,10 @@ public final class Economy extends JavaPlugin {
     }
     private void loadRegistry() {
         this.playerRegistry = new PlayerRegistry(this);
+    }
+
+    private void loadCommands() {
+        new EconomyCommand(this);
     }
 
     private void loadListeners() {
